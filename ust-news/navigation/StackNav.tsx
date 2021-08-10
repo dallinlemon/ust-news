@@ -1,7 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StackParamList } from '../types';
-import { HomeScreen } from '../screens/Homescreen';
+import HomeScreen from '../screens/Homescreen';
+import AllNews from '../screens/AllNews';
 
 const Stack = createStackNavigator<StackParamList>();
 
@@ -12,7 +13,7 @@ const Stack = createStackNavigator<StackParamList>();
 const RootNav: React.FC<unknown> = () => (
   <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Home" component={HomeScreen}/>
-    <Stack.Screen name="AllNews" component={HomeScreen}/>
+    <Stack.Screen name="AllNews" component={AllNews}/>
   </Stack.Navigator>
 );
 

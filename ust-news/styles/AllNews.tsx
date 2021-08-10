@@ -7,3 +7,10 @@ export const AllNewsStyles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
+
+export const DisplayNewsStyles = StyleSheet.create({
+  img: {
+    width: 100,
+    height: 100,
+  }
+});
