@@ -7,6 +7,7 @@ export const AllNewsStyles = StyleSheet.create({
     flex: 1,
     alignContent: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
   }
 });
 

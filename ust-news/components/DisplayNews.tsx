@@ -35,7 +35,10 @@ const DisplayNews: React.FC<Props> = ({ newsList }): JSX.Element => {
                   <Pressable style={DisplayNewsStyles.card} onPress={() => handlePress(item)} key={index}>
                     <Text style={DisplayNewsStyles.title}>{item.title}</Text>
                     <Text style={DisplayNewsStyles.text}>{item.description}</Text>   
-                    {item.urlToImage && <Image style={DisplayNewsStyles.img} source={{uri: item.urlToImage}}/>}
+                    {item.urlToImage 
+                      ? <Image style={DisplayNewsStyles.img} source={{uri: item.urlToImage}}/>
+                      : <Text style={{marginVertical: 20}}>No image found...</Text>
+                    }
                   </Pressable>
                 )
               }

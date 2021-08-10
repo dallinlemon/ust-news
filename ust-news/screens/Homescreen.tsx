@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, Pressable, Text, View } from 'react-native';
 import { HomeStyle } from '../styles/HomeStyles';
 
 type Props = {
@@ -15,9 +15,11 @@ const HomeScreen: React.FC<Props> = () => {
 
   return (
     <View style={HomeStyle.centerView}>
-    <Text>If it's stupid and it works, it's still stupid and you're lucky.</Text>
-    <Text>Seventy Maxims of Maximally Effective Mercenaries</Text>
-    <Button title={'News'} onPress={handleNav}/>
+      <Text style={HomeStyle.quote}>If it's stupid and it works, it's still stupid and you're lucky.</Text>
+      <Text style={HomeStyle.author}>Seventy Maxims of Maximally Effective Mercenaries</Text>
+      <Pressable style={HomeStyle.button} onPress={handleNav}>
+        <Text style={HomeStyle.text}>News</Text>
+      </Pressable>
     </View>
   );
 }

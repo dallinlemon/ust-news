@@ -15,10 +15,8 @@ const AllNews: React.FC<Props> = () => {
   
   return (
     <View style={AllNewsStyles.centerView}>
-      {/* {console.log(NewsList)} */}
-      <Text>All News</Text>
       <DisplayNews newsList={NewsList}/>
-      </View>
+    </View>
   );
 }
 

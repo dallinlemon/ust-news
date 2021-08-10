@@ -11,9 +11,9 @@ const Stack = createStackNavigator<StackParamList>();
  * @returns Stack Navigator
  */
 const RootNav: React.FC<unknown> = () => (
-  <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="Home" component={HomeScreen}/>
-    <Stack.Screen name="AllNews" component={AllNews}/>
+  <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: true }}>
+    <Stack.Screen name="Home" component={HomeScreen} options={{headerTitle: 'Home'}}/>
+    <Stack.Screen name="AllNews" component={AllNews} options={{headerTitle: 'News'}}/>
   </Stack.Navigator>
 );
 
