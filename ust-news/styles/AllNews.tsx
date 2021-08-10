@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
+
+const windowWidth = Dimensions.get('window').width;
 export const AllNewsStyles = StyleSheet.create({
   centerView: {
     flex: 1,
@@ -9,8 +11,19 @@ export const AllNewsStyles = StyleSheet.create({
 });
 
 export const DisplayNewsStyles = StyleSheet.create({
+  card: {
+    marginHorizontal: 10,
+    marginVertical: 30
+  },
   img: {
-    width: 100,
-    height: 100,
+    width: '100%',
+    height: windowWidth,
+  },
+  title: {
+    fontSize: 25,
+    fontWeight: 'bold'
+  },
+  text: {
+    marginVertical: 10
   }
 });
